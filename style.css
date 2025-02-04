@@ -6,12 +6,15 @@
 nav ul li:hover a{
     color: orangered;
 }
-.icon i{
+.icon label i{
     display: none;
     color: orangered;
 }
 .icon input{
     display: none;
+}
+.icon .social-media i{
+    visibility: visible;
 }
 body {
     font-family:  sans-serif;
@@ -19,9 +22,9 @@ body {
 
 nav{
     display: flex;
-    gap: 20px;
+    gap: 300px;
     background-color: black;
-    width: 100%;
+    width: 98%;
     justify-self: baseline;
     align-items: baseline;
     justify-content: center;
@@ -35,18 +38,20 @@ nav h1{
 nav ul{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 25px;
     color: white;
 }
 nav ul a{
     text-decoration: none;
     text-decoration-color: none;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
 }
 nav ul .social-media{
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: ce;
 }
 .banner{
     display: flex;
@@ -55,7 +60,7 @@ nav ul .social-media{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 70vh;
     width: 98%;
     background-color: rgb(0,0,0,0.8);
     background-image: url(../images/home.jpg);
@@ -71,7 +76,9 @@ nav ul .social-media{
     font-size: 60px;
     width: 50%;
     display: flex;
-    align-self: center;
+    align-content: center;
+    justify-self: center;
+    text-align: center;
 }
 .banner p{
     color: white;
@@ -111,7 +118,7 @@ nav ul .social-media{
     justify-content: center;
     gap: 50px;
     background-color: black;
-    padding: 10px;
+    padding: 50px 0px 50px 0px;
 }
 .timsec-left{
     width: 30%;
@@ -137,14 +144,18 @@ nav ul .social-media{
 }
 .cards{
     display: flex;
-    
+    padding: 20px 0px 20px 0px;
     align-items: center;
     justify-content: center;
    
     gap: 50px;
     width: 98%;
 }
-
+.card-center{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 .cards .cards-left{
     width: 30%;
 }
@@ -154,30 +165,55 @@ nav ul .social-media{
 .cards .cards-right{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: start;
     justify-content: start;
+    align-items: start; */
     width: 200px;
     box-shadow: 6px 0px 38px rgba(20, 20, 20, 0.10);
     background-color: rgb(255, 255, 255);
-    height: 300px;
+    height: 250px;
+    position: relative
 }
 .cards-right img{
     width: 200px;
     height: 200px;
+    object-fit: cover;
  
+}
+.cardd2 ul{
+    list-style: none;
+}
+.cardd2{
+    display: flex;
+    position:absolute;
+    bottom: -5px;
+    right:10px;
+    gap: 70px;
 }
 .cards-right .cardd {
     display: flex;
-    height: 50px;
-    
-     
-    }
+    position:absolute;
+    bottom: -5px;
+    right: 20px;
+    gap: 20px;
+    /* height: 50px; */
+    /* position: relative;
+    align-items: start;
+    justify-content: start;    */ */
+}
+
     .cardd ul{
         list-style: none;
         align-self: start;
-        position: relative;
+        align-items: start;
+        justify-self: start;
+        /* position: relative; */
         left: 0px;
     }
+.card .instruct{
+    position :relative;
+    left: -10%;
+}
 .social-icon{
    
     list-style: none;
@@ -201,13 +237,14 @@ nav ul .social-media{
     justify-content: center;
     width: 98%;
     gap:100px;
-    
+    padding: 50px 0px 50px 0px;
     
 }
 .amount .card2{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    
 }
 .heading{
     padding-top: 50px;
@@ -221,11 +258,19 @@ nav ul .social-media{
     display: flex;
     flex-direction: column;
     width: 300px;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(255, 255, 255);
     align-items: start;
     justify-content: start;
+    align-self: center;
     gap:-5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 6px 0 38px rgba(20, 20, 20,0.10)
   }
+  .det{
+    padding: 5px;
+  }
+
   .card h{
    display:flex;
    align-items: center;
@@ -252,8 +297,9 @@ tr th{
 table{
     background-color: rgb(26, 22, 22);
     color: white;
-    overflow-x: scroll;
-     width: auto;
+    
+     width: 80%;
+     
 }
 th ,td{
     padding: 10px;
@@ -266,9 +312,10 @@ th ,td{
     background-color: rgb(26, 22, 22);
     align-items: center;
     justify-content: center;
-    overflow-x: scroll ;
+    overflow-x: scroll;
     width: 100%;
-    padding: 50px 0px 50px 0px;
+    /* margin-left: 20px; */
+    padding: 100px 0px 100px 0px;
   
 }
 .table h1,h{
@@ -289,13 +336,15 @@ th ,td{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    gap: 20px;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
 }
+
 form{
     display: flex;
     flex-direction: column;
+
 }
 form input{
     padding: 10px;
@@ -303,6 +352,7 @@ form input{
 .form-right .add{
     display: flex;
     align-items: center;
+    
     gap: 10px;
     /* justify-content: center; */
 }
@@ -314,23 +364,26 @@ form input{
         justify-content: center;
         gap: 19px;
         align-self: start;
-        width: 50%;
+       
 }
 .form .form-right{
     display: flex;
     flex-direction: column;
     gap: 9px;
-    align-self: start;
+    align-self: center;
     align-items: start;
     width: 50%;
+
     justify-content: start;
 }
 .form-right i{
     color: orangered;
    }
    .form-right iframe{
-    border-top: 1px solid gray;
+    border-top: 2px solid gray;
+    padding-top: 5px;
    }
+ 
 .footer{
     display: flex;
     align-items: center;
@@ -472,7 +525,9 @@ form input{
     .cards{
         flex-direction: column;
         align-items: center;
+        padding: 100px 0px 100px 0px;
         justify-content: center;
+        width: 100%;
     }
     #nav:checked~ul{
         top: 40px;
@@ -496,23 +551,36 @@ form input{
         width: 70%;
      }
     .table{
-        overflow: scroll;
+        width: 100%;
+      
     }
     .amount{
-         align-items: start;
-         justify-content: start;
+         align-items:center;
+         justify-content:center;
+         padding: 100px 0px 100px 0px;
+    }
+    table {
+        margin-left: 200px;
+       /* padding-left: 150px;
+        width: 100%; */
+        /* background-color: rgb(68, 64, 58) !important; */
+          overflow-x: scroll;
     }
     .amount .card2{
         flex-direction: column;
-        align-items: start;
-        justify-content: start;
+        align-items:center;
+        justify-content:center;
+        gap: 50px;
     }
     .form{
         flex-direction: column;
-        align-items: start;
-        justify-content: start;
+        align-items:center;
+        justify-content:center;
         width: 98%;
         margin: 10px;
+    }
+    .form  .form-left{
+        width: 100%;
     }
     form input{
         padding: 10px;
@@ -522,5 +590,6 @@ form input{
     }
     .footer{
         flex-direction: column;
+        width: 100%;
     }
  }
