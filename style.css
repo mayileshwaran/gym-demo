@@ -1,4 +1,8 @@
-
+*{
+    padding: 0px;
+    margin: 0px;
+    /* box-sizing: border-box; */
+}
 .active a{
     color: orangered;
 }
@@ -6,12 +10,19 @@
 nav ul li:hover a{
     color: orangered;
 }
+.icon{
+    display: flex;
+    gap: 50px;
+}
 .icon label i{
     display: none;
     color: orangered;
 }
 .icon input{
     display: none;
+}
+.social-media li:hover{
+    color: orangered;
 }
 .icon .social-media i{
     visibility: visible;
@@ -24,13 +35,14 @@ nav{
     display: flex;
     gap: 300px;
     background-color: black;
-    width: 98%;
-    justify-self: baseline;
-    align-items: baseline;
+    width: 100%;
+    align-items: center;
     justify-content: center;
     position: fixed;
     top: 0px;
+    height: 50px;
     align-self: center;
+    padding: 20px;
 }
 nav h1{
     color: white;
@@ -51,7 +63,7 @@ nav ul .social-media{
     display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: ce;
+    justify-content: center;
 }
 .banner{
     display: flex;
@@ -60,15 +72,16 @@ nav ul .social-media{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vh;
-    width: 98%;
+    height: 90vh;
+    width: 100%;
     background-color: rgb(0,0,0,0.8);
     background-image: url(../images/home.jpg);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
-    gap: -5px;
-    margin-bottom: 50px;
+    gap: 5px;
+    /* margin-bottom: 50px; */
+    align-self: bottom;
     padding-bottom: 20px;
 }
 .banner h1{
@@ -81,7 +94,7 @@ nav ul .social-media{
     text-align: center;
 }
 .banner p{
-    color: white;
+    color: gray;
     font-size: 20px;
     align-self: center;
 }
@@ -111,40 +124,51 @@ nav ul .social-media{
     justify-content: center;
 }
 .timsec{
-    width: 97%;
+    width: 100%;
     display:flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 100px;
     background-color: black;
-    padding: 50px 0px 50px 0px;
+   padding-bottom: 100px;
+   padding-top: 100px;
 }
 .timsec-left{
     width: 30%;
     color: white;
-    border-right: 1px solid gray;
-    padding-right: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+    padding-right: 50px;
 }
 .timsec-left p{
     color: gray;
 }
 .timsec-left h{
     color: white;
+    font-size: 20px;
 }
 .timsec-right{
     width: 30%;
     color: white;
+    border-left: 1px solid gray;
+    padding-left: 50px;
+    display: flex;
+   flex-direction: column;
+   gap: 10px;
 }
 .timsec-right p{
     color: gray;
 }
 .timsec-right h{
     color: white;
+    font-weight: bold;
 }
 .cards{
     display: flex;
-    padding: 20px 0px 20px 0px;
+   padding-bottom: 100px;
+   padding-top: 100px;
     align-items: center;
     justify-content: center;
    
@@ -158,6 +182,9 @@ nav ul .social-media{
 }
 .cards .cards-left{
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 .cards .cards-left p{
     color: gray;
@@ -171,8 +198,9 @@ nav ul .social-media{
     width: 200px;
     box-shadow: 6px 0px 38px rgba(20, 20, 20, 0.10);
     background-color: rgb(255, 255, 255);
-    height: 250px;
-    position: relative
+    height: 280px;
+    position: relative;
+    z-index: -5;
 }
 .cards-right img{
     width: 200px;
@@ -180,27 +208,26 @@ nav ul .social-media{
     object-fit: cover;
  
 }
+
 .cardd2 ul{
     list-style: none;
 }
 .cardd2{
     display: flex;
     position:absolute;
-    bottom: -5px;
-    right:10px;
-    gap: 70px;
+    bottom: 15px;
+    left:15px;
+    gap: 80px;
 }
 .cards-right .cardd {
     display: flex;
     position:absolute;
-    bottom: -5px;
-    right: 20px;
-    gap: 20px;
-    /* height: 50px; */
-    /* position: relative;
-    align-items: start;
-    justify-content: start;    */ */
+    bottom: 15px;
+    left: 15px;
+    gap: 60px;
 }
+  
+
 
     .cardd ul{
         list-style: none;
@@ -237,7 +264,7 @@ nav ul .social-media{
     justify-content: center;
     width: 98%;
     gap:100px;
-    padding: 50px 0px 50px 0px;
+   padding-bottom: 100px;
     
 }
 .amount .card2{
@@ -247,7 +274,7 @@ nav ul .social-media{
     
 }
 .heading{
-    padding-top: 50px;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -264,13 +291,16 @@ nav ul .social-media{
     align-self: center;
     gap:-5px;
     margin-left: 5px;
+    height: 460px;
     margin-right: 5px;
     box-shadow: 6px 0 38px rgba(20, 20, 20,0.10)
   }
-  .det{
-    padding: 5px;
+ .card .det{
+    padding: 20px;
   }
-
+.det-2{
+    padding: 0px 20px 0px 20px;
+}
   .card h{
    display:flex;
    align-items: center;
@@ -302,20 +332,27 @@ table{
      
 }
 th ,td{
-    padding: 10px;
+    padding: 20px;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
 } 
+tr:nth-child(3) td:nth-last-child(1){
+    border-right: 1px solid black;
+    }
+    tr:nth-child(5) td:nth-last-child(1){
+        border-right: 1px solid black;
+        }
 .table{
     display: flex;
     flex-direction: column;
     background-color: rgb(26, 22, 22);
     align-items: center;
     justify-content: center;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     width: 100%;
     /* margin-left: 20px; */
-    padding: 100px 0px 100px 0px;
+   padding-bottom: 100px;
+   padding-top: 100px;
   
 }
 .table h1,h{
@@ -339,6 +376,7 @@ th ,td{
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
+    padding: 100px 0px 100px  0px;
 }
 
 form{
@@ -361,9 +399,10 @@ form input{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 19px;
+        justify-content:center;
+        gap: 30px;
         align-self: start;
+        
        
 }
 .form .form-right{
@@ -371,6 +410,7 @@ form input{
     flex-direction: column;
     gap: 9px;
     align-self: center;
+
     align-items: start;
     width: 50%;
 
@@ -388,8 +428,11 @@ form input{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 98%;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    border-top: 1px gray solid;
 }
+
 .footer .right-foot{
     width: 30%;
     display: flex;
@@ -400,6 +443,11 @@ form input{
     display: flex;
     text-decoration-line: none;
     text-decoration-color: none;
+    color: black;
+    display: flex;
+    gap: 20px;
+}
+.footer .left-foot i{
     color: orangered;
 }
 .footer .left-foot{
@@ -408,105 +456,45 @@ form input{
     gap: 20px;
     padding: 20px;
 }
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    width: 98%;
-    background-color: rgb(0,0,0,0.8);
-    background-image: url(../images/about.jpg);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-size: cover;
-    gap: 10px;
-    margin-bottom: 50px;
+.footer .right-foot a{
+    text-decoration-color: none;
+    color: black;
+    text-decoration-line: none;
 }
-.about h1{
-    color: white;
-}
-.classes{
 
-    height: 80vh;
-    width: 98%;
-    background-color: rgb(0,0,0,0.8);
-    background-image: url('../images/classes.jpg');
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    gap: 10px;
-    margin-bottom: 50px;
-}
-.classes h1{
-    color: white;
-}
-.contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    width: 98%;
-    background-color: rgb(0,0,0,0.8);
-    background-image: url('../images/contact-sample.jpg');
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    gap: 10px;
-    margin-bottom: 50px;
-}
-.banner{
-    width: 98%;
-    height: 100vh;
-}
-.contact h1{
-    color: white;
-}
-.schedule{
-    display: flex;
-    background-position: top;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    align-self: center;
-    justify-self: center;
-    width: 98%;
-    background-color: rgb(0,0,0,0.2);
-    background-image: url(../images/schedule.jpg);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-size: cover;
-    gap: 10px;
-    margin-bottom: 50px;
-}
-.schedule h1{
-    color: white;
-}
 .card2 .card .det{
     display: flex;
     gap: 100px;
+}
+@media only screen and (max-width:1200px){
+nav{
+    justify-content: center;
+    gap: 200px;
+}
+}
+@media only screen and (max-width:1150px){
+nav{
+    gap:150px;
+    justify-content: center;
+}
+nav ul{
+    gap: 20px;
+}
 }
 @media only screen and (max-width:900px){
     nav .icon i {
         display: block;
         color: white;
-        position: absolute;
-        top: 20px;
-        right:20px
     }
   
-   nav{
-     gap: 20px;
-     display: flex;
-     align-items: start;
-     justify-content: space-between;
-    width: 95%;
-    padding-right: 3%;
-   }
+    nav{
+        display: flex;
+        align-items: space-between;
+        justify-content: center;
+        width: 70%;
+        gap: 20%;
+       
+      }
    
     nav ul{
         gap: 20px;
@@ -517,15 +505,27 @@ form input{
         align-items: start;
         top: -220px;
         z-index: 3;
+    }
 
+    .banner{
+        padding-left: 20%;
+        width: 100%;
+        padding-right: 10%;
+        padding-top: 50px;
+    }
+    .card-center{
+        flex-direction: column;
+    }
+    .cards-right{
+        width: 80vw;
     }
     .cards-left{
-        width: 70%;
+        width: 100vw;
     }
     .cards{
         flex-direction: column;
         align-items: center;
-        padding: 100px 0px 100px 0px;
+        padding-bottom: 100px;
         justify-content: center;
         width: 100%;
     }
@@ -533,34 +533,40 @@ form input{
         top: 40px;
        left: 40PX;
        padding: 20px;
-        transition-duration: 7ms;
-    }
+        transition-duration: 7ms;}
+
     .timsec{
         flex-direction: column;
         align-items: center;
-        width: 98%;
+        width: 100%;
+        padding-left: 10%;
         justify-content: center;
     }
     .timsec-left{
-        width: 70%;
+        width: 90%;
         border-right: none;
         border-bottom: 1px solid gray;
         padding-bottom: 20px;
     }
-    .timesec-right{
-        width: 70%;
+    .timsec-right{
+        width: 90%;
+        border-left: none;
      }
     .table{
         width: 100%;
+        overflow-x: scroll;
       
+        align-items: center;
     }
     .amount{
          align-items:center;
          justify-content:center;
-         padding: 100px 0px 100px 0px;
+         padding-bottom: 100px; 
+         width: 100%;
     }
     table {
         margin-left: 200px;
+        margin-right: 200px;
        /* padding-left: 150px;
         width: 100%; */
         /* background-color: rgb(68, 64, 58) !important; */
@@ -576,20 +582,59 @@ form input{
         flex-direction: column;
         align-items:center;
         justify-content:center;
-        width: 98%;
-        margin: 10px;
+        width: 80%;
+        /* margin: 10px; */
+    }
+    .form .form-right{
+        width:70%;
+        padding-left: 50px;
     }
     .form  .form-left{
-        width: 100%;
+        width: 70%;
+        padding-left: 150px;
     }
-    form input{
-        padding: 10px;
-    }
+   
     .form iframe{
-        width: 200px;
+        width: 100%;
     }
     .footer{
         flex-direction: column;
         width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer .left-foot{
+        flex-direction: column;
+    }
+ }
+ @media only screen and (max-width:650px){
+    .table{
+        padding-left:40px;
+    }
+ }
+ @media only screen and (max-width:550px){
+    .table{
+        padding-left:60px;
+    }
+ }
+ @media only screen and (max-width:500px){
+    .table{
+        padding-left:80px;
+    }
+ }
+ @media only screen and (max-width:450px){
+    .table{
+        padding-left: 120px;
+        padding-right:10%;
+    }
+ }
+ @media only screen and (max-width:400px){
+    .table{
+        padding-left:150px;
+    }
+ }
+ @media only screen and (max-width:350px){
+    .table{
+        padding-left:170px;
     }
  }
